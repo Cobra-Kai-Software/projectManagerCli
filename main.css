@@ -1,0 +1,55 @@
+.bigMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.litteMain {
+  display: flex;
+  justify-content: center;
+  /*background-color: goldenrod;*/
+  height: 80vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects {
+  width: 35vw;
+  height: 60vh;
+  border: solid 1px;
+  /*background-color: gray;*/
+}
+
+.tasks {
+  width: 85vw;
+  height: 75vh;
+  border: solid 1px;
+  /*background-color: lightblue;*/
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  align-items: center;
+}
+
+.todo {
+  border: solid 1px;
+  width: 27vw;
+  height: 71vh;
+  margin: .5vw
+}
+
+.icebox {
+  border: solid 1px;
+  width: 27vw;
+  height: 71vh;
+  margin: .5vw
+}
+
+.done {
+  border: solid 1px;
+  width: 27vw;
+  height: 71vh;
+  margin: .5vw
+}

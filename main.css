@@ -8,11 +8,9 @@ body {
 }
 
 .litteMain {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   height: 80vh;
   width: 95vw;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -25,11 +23,10 @@ body {
 
 .tasks {
   width: 85vw;
-  height: 75vh;
   border: solid 1px;
-  display: flex;
+  margin-top: auto;
+  display: inline-flex;
   justify-content: center;
-  flex-flow: row;
   align-items: center;
 }
 
@@ -55,4 +52,7 @@ body {
   height: 71vh;
   margin: .5vw;
   background: linear-gradient(rgba(217, 99 ,89,.7), rgba(150, 50 ,49,.7));
+}
+@-ms-viewport{
+  width: device-width;
 }

@@ -1,3 +1,6 @@
+body {
+  background-color: lightgray;
+}
 .bigMain {
   display: flex;
   justify-content: center;
@@ -7,7 +10,6 @@
 .litteMain {
   display: flex;
   justify-content: center;
-  /*background-color: goldenrod;*/
   height: 80vh;
   width: 95vw;
   display: flex;
@@ -19,14 +21,12 @@
   width: 35vw;
   height: 60vh;
   border: solid 1px;
-  /*background-color: gray;*/
 }
 
 .tasks {
   width: 85vw;
   height: 75vh;
   border: solid 1px;
-  /*background-color: lightblue;*/
   display: flex;
   justify-content: center;
   flex-flow: row;
@@ -37,19 +37,22 @@
   border: solid 1px;
   width: 27vw;
   height: 71vh;
-  margin: .5vw
+  margin: .5vw;
+  background: linear-gradient(rgba(245, 150 ,0,.5),rgba(255, 151 ,0,.7));
 }
 
 .icebox {
   border: solid 1px;
   width: 27vw;
   height: 71vh;
-  margin: .5vw
+  margin: .5vw;
+  background: linear-gradient(rgba(141, 240 ,242,.7), rgba(81, 180 ,182,.7));
 }
 
 .done {
   border: solid 1px;
   width: 27vw;
   height: 71vh;
-  margin: .5vw
+  margin: .5vw;
+  background: linear-gradient(rgba(217, 99 ,89,.7), rgba(150, 50 ,49,.7));
 }

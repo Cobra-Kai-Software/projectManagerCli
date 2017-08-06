@@ -5,14 +5,16 @@ const url = 'http://localhost:8080/'
 getProjects()
 
 $(`#home`).click(function() {
-  $('.projects').remove()
-  getProjects()
-}) 
+  window.location.replace('./index.html')
+})
 
-$(`.littleMain`).click(function(event) {
+$(`.projects`).click(function(event) {
   const targetOfClick = $(event.target).attr('data-project')
+  console.log(targetOfClick);
+  if (targetOfClick >= 1){
   localStorage.project = targetOfClick
   window.location.replace('taskPage.html')
+}
 })
 
 function getTasks(project) {
@@ -31,4 +33,42 @@ $('.littleMain').click(function(event) {
       window.location.reload();
     }
   })
+})
+
+$("#loginSubmit").click(function(){
+  event.preventDefault()
+  let userEmail = $('#loginEmail').val()
+  let password = $('#loginPassword').val()
+  let login = {
+    "email": userEmail,
+    "password": password
+  }
+  console.log(login);
+  $.ajax({
+  url: url + 'login',
+  type: 'POST',
+  data: login,
+  success: function(result) {
+    if (result.error) {
+      alert(result.error)
+    } else {
+      localStorage.setItem('token', result.data)
+      window.location.replace('./tokenTasks.html')
+      console.log(result);
+    }
+  }
+  })
+  })
+
+$('#createUser').click(function(){
+  event.preventDefault()
+  let newName = $('#newName').val()
+  let newEmail = $('#newEmail').val()
+  let newPassword = $('#newPassword').val()
+  let newUser = {
+    "name": newName,
+    "email": newEmail,
+    "password": newPassword
+  }
+  console.log(newUser);
 })

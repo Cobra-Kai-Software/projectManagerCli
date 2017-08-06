@@ -2,9 +2,12 @@ $(document).ready(() => {})
 const url = 'http://localhost:8080/'
 // const url = 'https://still-bayou-84038.herokuapp.com/'
 
+if (localStorage.getItem('token') === null){
+    window.location.replace('./taskPage.html')
+}
 
 $(`#home`).click(function() {
-  window.location.replace('./index.html')
+  window.location.replace('./tokenProjects.html')
 })
 
 function getTasks(project) {
@@ -49,50 +52,9 @@ $('#postButton').click(function(event) {
   })
 
 })
-$("#loginSubmit").click(function(){
-  event.preventDefault()
-  let userEmail = $('#loginEmail').val()
-  let password = $('#loginPassword').val()
-  let login = {
-    "email": userEmail,
-    "password": password
-  }
-  console.log(login);
-  $.ajax({
-  url: url + 'login',
-  type: 'POST',
-  data: login,
-  success: function(result) {
-    if (result.error) {
-      alert(result.error)
-    } else {
-      localStorage.setItem('token', result.data)
-      window.location.replace('./tokenTasks.html')
-      console.log(result);
-    }
-  }
-  })
-  })
 
-$('#createUser').click(function(){
+$('#logout').click(function(){
   event.preventDefault()
-  let newName = $('#newName').val()
-  let newEmail = $('#newEmail').val()
-  let newPassword = $('#newPassword').val()
-  let newUser = {
-    "name": newName,
-    "email": newEmail,
-    "password": newPassword
-  }
-  $.ajax({
-    url: url + 'login',
-    type: 'POST',
-    data: newUser,
-    success: function(result) {
-      localStorage.setItem('token', result.data)
-      window.location.replace('./tokenTasks.html')
-      console.log(result);
-    }
-  })
-  console.log(newUser);
+  localStorage.removeItem('token')
+  window.location.replace('./taskPage.html')
 })

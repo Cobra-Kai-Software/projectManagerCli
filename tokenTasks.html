@@ -20,49 +20,7 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" id="loginEmail" placeholder="Email">
-      <input class="form-control mr-sm-2" type="password" id="loginPassword" placeholder="Password">
-      <button class="btn btn-outline-primary my-2 my-sm-0" id="loginSubmit" type="submit">Login</button>
-
-      <div class="add">
-        <button type="button" class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#newUser">Create User</button><br>
-        <div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group">
-                    <label for="newName" class="form-control-label">Name:</label>
-                    <input type="text" class="form-control" id="newName">
-
-                  </div>
-                  <div class="form-group">
-                    <label for="newEmail" class="form-control-label">Email:</label>
-                    <input type="email" class="form-control" id="newEmail">
-
-                  </div>
-                  <div class="form-group">
-                    <label for="newPassword" class="form-control-label">Password:</label>
-                    <input type="password" class="form-control" id="newPassword">
-
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button id="createUser" type="button" class="btn btn-primary">Send message</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</form>
+      <button class="btn btn-outline-primary my-2 my-sm-0" id="logout" type="submit">Logout</button> </form>
   </div>
 </nav>
 
@@ -70,7 +28,37 @@
   <main class="bigMain container">
 
     <main class="littleMain container">
-
+      <div class="add">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Task</button><br>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="form-control-label">Task Name:</label>
+                    <input type="text" class="form-control" id="task-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Task Description:</label>
+                    <textarea class="form-control" id="description-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="postButton" type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="tasks">
         <div class="todo cards-group">
 
@@ -92,8 +80,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="./logic.js" charset="utf-8"></script>
-  <script src="./app2.js" charset="utf-8"></script>
+  <script src="./tokenLogic.js" charset="utf-8"></script>
+  <script src="./token2.js" charset="utf-8"></script>
 </body>
 
 </html>

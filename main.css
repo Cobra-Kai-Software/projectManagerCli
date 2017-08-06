@@ -56,3 +56,12 @@ body {
   margin: .5vw;
   background: linear-gradient(rgba(217, 99 ,89,.7), rgba(150, 50 ,49,.7));
 }
+.form-group{
+  margin: 2vw;
+}
+.modal-body {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-right: 8vw;
+}

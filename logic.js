@@ -15,60 +15,8 @@ function getProjects() {
     }
   })
 }
-function addPost(){
-  $('.littleMain').append(`
-    <div class="add">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Task</button><br>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="form-control-label">Task Name:</label>
-            <input type="text" class="form-control" id="task-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label">Task Description:</label>
-            <textarea class="form-control" id="description-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button id="postButton" type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    `
-  )
-}
-
-
 
 function addTasks(tasksData) {
-  $('.projects').css('display', 'none');
-  addPost()
-  $('.littleMain').append(`<section class="tasks">
-    <div class="todo" id="projectID" data-projectId="${tasksData[0].project_id}">
-
-    </div>
-    <div class="icebox">
-
-    </div>
-    <div class="done">
-
-    </div>
-  </section>`)
-
   for (var i = 0; i < tasksData.length; i++) {
     if (tasksData[i].todo === true) {
       $('.todo').append(`
@@ -126,6 +74,7 @@ function addTasks(tasksData) {
       type: 'PUT',
       data: todoNew,
       success: function(result) {
+        window.location.reload();
         }
     })
   })
@@ -144,6 +93,7 @@ function addTasks(tasksData) {
       type: 'PUT',
       data: iceNew,
       success: function(result) {
+        window.location.reload();
         }
       })
   })
@@ -162,6 +112,8 @@ function addTasks(tasksData) {
       type: 'PUT',
       data: doneNew,
       success: function(result) {
+        console.log('hi');
+        window.location.reload();
       }
     })
   })
@@ -184,6 +136,7 @@ function addTasks(tasksData) {
       type: 'POST',
       data: newTask,
       success: function(result) {
+        window.location.reload();
         }
     })
   })

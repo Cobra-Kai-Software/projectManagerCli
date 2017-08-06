@@ -2,18 +2,8 @@ $(document).ready(() => {
 })
 const url = 'http://localhost:8080/'
 
-getProjects()
-
 $(`#home`).click(function() {
-  $('.projects').remove()
-  getProjects()
-})
-
-$(`.littleMain`).click(function(event) {
-  const targetOfClick = $(event.target).attr('data-project')
-  localStorage.project = targetOfClick
-  window.location.replace('taskPage.html')
-  // getTasks(localStorage.project)
+  window.location.replace('./index.html')
 })
 
 function getTasks(project) {
@@ -21,6 +11,7 @@ function getTasks(project) {
     addTasks(tasksData)
   })
 }
+getTasks(localStorage.project)
 
 $('.littleMain').click(function(event) {
   const destroy = $(event.target).attr('data-id')

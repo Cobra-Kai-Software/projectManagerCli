@@ -1,6 +1,6 @@
 $(document).ready(() => {})
-const url = 'http://localhost:8080/'
-// const url = 'https://still-bayou-84038.herokuapp.com/'
+// const url = 'http://localhost:8080/'
+const url = 'https://still-bayou-84038.herokuapp.com/'
 
 
 $(`#home`).click(function() {

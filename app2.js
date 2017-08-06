@@ -1,6 +1,5 @@
-$(document).ready(() => {
-})
-
+$(document).ready(() => {})
+// const url = 'http://localhost:8080/'
 const url = 'https://still-bayou-84038.herokuapp.com/'
 
 
@@ -46,7 +45,7 @@ $('#postButton').click(function(event) {
     data: newTask,
     success: function(result) {
       window.location.reload();
-      }
+    }
   })
 
 })

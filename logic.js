@@ -75,7 +75,7 @@ function addTasks(tasksData) {
       data: todoNew,
       success: function(result) {
         window.location.reload();
-        }
+      }
     })
   })
 
@@ -88,14 +88,14 @@ function addTasks(tasksData) {
       "finished": false,
       "icebox": true
     }
-     $.ajax({
+    $.ajax({
       url: url + `tasks/` + icebox,
       type: 'PUT',
       data: iceNew,
       success: function(result) {
         window.location.reload();
-        }
-      })
+      }
+    })
   })
 
   $('button').click(function(event) {

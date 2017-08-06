@@ -2,90 +2,90 @@
 <html>
 
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Project Manager</title>
-   <link rel="icon" href="./pictures/planningtools.png">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-   <link rel="stylesheet" href="./main.css">
- </head>
- <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(darkgray, lightgray); border: solid .01vh;">
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Manager</title>
+  <link rel="icon" href="./pictures/planningtools.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(darkgray, lightgray); border: solid .01vh;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
-   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-     <a class="navbar-brand" id="home" href="#">Project Manager</a>
-     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-       <li class="nav-item active">
-       </li>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" id="home" href="#">Project Manager</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+      </li>
 
-     </ul>
-     <form class="form-inline my-2 my-lg-0">
-       <input class="form-control mr-sm-2" type="text" placeholder="Email">
-       <input class="form-control mr-sm-2" type="text" placeholder="Password">
-       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-       <button id="newAccount" class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="margin-left: .6vw;">Create Account</button>
-     </form>
-   </div>
- </nav>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Email">
+      <input class="form-control mr-sm-2" type="text" placeholder="Password">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      <button id="newAccount" class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="margin-left: .6vw;">Create Account</button>
+    </form>
+  </div>
+</nav>
 
 <body>
-   <main class="bigMain container">
+  <main class="bigMain container">
 
-     <main class="littleMain container">
-       <div class="add">
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Task</button><br>
-         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <main class="littleMain container">
+      <div class="add">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Task</button><br>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
              <span aria-hidden="true">&times;</span>
            </button>
-         </div>
-         <div class="modal-body">
-           <form>
-             <div class="form-group">
-               <label for="recipient-name" class="form-control-label">Task Name:</label>
-               <input type="text" class="form-control" id="task-name">
-             </div>
-             <div class="form-group">
-               <label for="message-text" class="form-control-label">Task Description:</label>
-               <textarea class="form-control" id="description-text"></textarea>
-             </div>
-           </form>
-         </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-           <button id="postButton" type="button" class="btn btn-primary">Send message</button>
-         </div>
-       </div>
-     </div>
-   </div>
-       </div>
-       <section class="tasks">
-         <div class="todo cards-group">
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="form-control-label">Task Name:</label>
+                    <input type="text" class="form-control" id="task-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="form-control-label">Task Description:</label>
+                    <textarea class="form-control" id="description-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="postButton" type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="tasks">
+        <div class="todo cards-group">
 
-         </div>
-         <div class="icebox cards-group">
+        </div>
+        <div class="icebox cards-group">
 
-         </div>
-         <div class="done cards-group">
+        </div>
+        <div class="done cards-group">
 
-         </div>
-       </section>
-     </main>
-   </main>
-   <footer>
-     <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(lightgray,darkgray); border: solid .01vh;">
-       <a class="navbar-brand" href="#">© 2017 Project Manager. All Rights Reserved</a>
-     </nav>
-   </footer>
-   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        </div>
+      </section>
+    </main>
+  </main>
+  <footer>
+    <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(lightgray,darkgray); border: solid .01vh;">
+      <a class="navbar-brand" href="#">© 2017 Project Manager. All Rights Reserved</a>
+    </nav>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="./logic.js" charset="utf-8"></script>
-   <script src="./app2.js" charset="utf-8"></script>
- </body>
+  <script src="./app2.js" charset="utf-8"></script>
+</body>
 
 </html>

@@ -1,6 +1,6 @@
-$(document).ready(() => {
-})
-const url = 'http://localhost:8080/'
+$(document).ready(() => {})
+// const url = 'http://localhost:8080/'
+const url = 'https://still-bayou-84038.herokuapp.com/'
 
 getProjects()
 
@@ -28,7 +28,7 @@ $('.littleMain').click(function(event) {
     url: url + `tasks/` + destroy,
     type: 'DELETE',
     success: function(result) {
-     window.location.reload();
+      window.location.reload();
     }
   })
 })

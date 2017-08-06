@@ -14,7 +14,7 @@ function getProjects() {
       )
     }
   })
-}
+} 
 
 function addTasks(tasksData) {
   for (var i = 0; i < tasksData.length; i++) {

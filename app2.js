@@ -11,7 +11,7 @@ function getTasks(project) {
   $.get(url + project, function(tasksData) {
     addTasks(tasksData)
   })
-}
+} 
 getTasks(localStorage.project)
 
 $('.littleMain').click(function(event) {

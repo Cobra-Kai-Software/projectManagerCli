@@ -117,27 +117,4 @@ function addTasks(tasksData) {
       }
     })
   })
-  $('#postButton').click(function(event) {
-    const newTaskProject = $('#projectID').attr('data-projectId')
-    const newTaskName = $('#task-name').val()
-    const newTaskDescription = $('#description-text').val()
-    const newTask = {
-      "name": newTaskName,
-      "description": newTaskDescription,
-      "todo": true,
-      "inprogress": false,
-      "finished": false,
-      "icebox": false,
-      "project_id": newTaskProject
-    }
-    console.log(newTaskProject);
-    $.ajax({
-      url: url + newTaskProject,
-      type: 'POST',
-      data: newTask,
-      success: function(result) {
-        window.location.reload();
-        }
-    })
-  })
 }

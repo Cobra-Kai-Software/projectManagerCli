@@ -7,7 +7,7 @@ getProjects()
 $(`#home`).click(function() {
   $('.projects').remove()
   getProjects()
-})
+}) 
 
 $(`.littleMain`).click(function(event) {
   const targetOfClick = $(event.target).attr('data-project')

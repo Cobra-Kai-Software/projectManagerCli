@@ -35,15 +35,16 @@ body {
   margin-top: auto;
   margin-top: 2vh;
   display: table;
-  width: 95%
+  width: 95%;
+  min-height: 45vh;
 }
 
 .todo {
   display: table-cell;
   border: solid 1px;
   width: 27vw;
-  min-height: 71vh;
   height: auto;
+  min-height: 71vh;
   margin: .5vw;
   background: linear-gradient(rgba(245, 150, 0, .9), rgba(255, 151, 0, .9));
 }

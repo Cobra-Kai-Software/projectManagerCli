@@ -5,7 +5,7 @@ const url = 'http://localhost:8080/'
 getProjects()
 
 $(`#home`).click(function() {
-  window.location.replace('../HTML/index.html')
+  window.location.replace('../index.html')
 })
 
 $(`.projects`).click(function(event) {
@@ -13,7 +13,7 @@ $(`.projects`).click(function(event) {
   console.log(targetOfClick);
   if (targetOfClick >= 1){
   localStorage.project = targetOfClick
-  window.location.replace('./HTML/taskPage.html')
+  window.location.replace('../HTML/taskPage.html')
 }
 })
 
@@ -54,7 +54,7 @@ $("#loginSubmit").click(function() {
           alert(result.error)
         } else {
           localStorage.setItem('token', result.data)
-          window.location.replace('./HTML/tokenProjects.html')
+          window.location.replace('../HTML/tokenProjects.html')
           console.log(result);
         }
       }
@@ -86,7 +86,7 @@ $('#createUser').click(function() {
       } else {
         console.log(result);
         localStorage.setItem('token', result.data)
-        window.location.replace('./HTML/tokenProjects.html')
+        window.location.replace('../HTML/tokenProjects.html')
         console.log(result);
       }
     }

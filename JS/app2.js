@@ -100,7 +100,7 @@ $('#createUser').click(function() {
         alert(result.error)
       } else {
         localStorage.setItem('token', result.data)
-        window.location.replace('./HTML/tokenTasks.html')
+        window.location.replace('../HTML/tokenTasks.html')
         console.log(result);
       }
     }

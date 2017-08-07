@@ -50,7 +50,6 @@ $('#postButton').click(function(event) {
       window.location.reload();
     }
   })
-
 })
 
 $('#logout').click(function(){

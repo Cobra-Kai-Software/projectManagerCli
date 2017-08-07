@@ -89,13 +89,23 @@ $('#createUser').click(function() {
     "email": newEmail,
     "password": newPassword
   }
+  let email_filter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
+    if (email_filter.test(newEmail)) {
   $.ajax({
-    url: url + 'login',
+    url: url + 'login/signup',
     type: 'POST',
     data: newUser,
     success: function(result) {
-
+      if (result.error) {
+        alert(result.error)
+      } else {
+        localStorage.setItem('token', result.data)
+        window.location.replace('./HTML/tokenTasks.html')
+        console.log(result);
+      }
     }
   })
-  console.log(newUser);
+} else {
+      alert('Your email address is invalid. Please enter a valid address.')
+}
 })

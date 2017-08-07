@@ -23,7 +23,44 @@
       <input class="form-control mr-sm-2" type="email" id="loginEmail" placeholder="Email">
       <input class="form-control mr-sm-2" type="password" id="loginPassword" placeholder="Password">
       <button class="btn btn-primary my-2 my-sm-0" id="loginSubmit" type="submit">Login</button>
-      <button id="newAccount" class="btn btn-primary my-2 my-sm-0" type="submit" id="createUser" style="margin-left: .6vw;">Create Account</button>
+      <div class="add">
+        <button type="button" class="btn btn-primary my-2 my-sm-0" data-toggle="modal" data-target="#newUser" style="margin-left:1vh;">Create User</button><br>
+        <div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="newName" class="form-control-label">Name:</label>
+                    <input type="text" class="form-control" id="newName">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="newEmail" class="form-control-label">Email:</label>
+                    <input type="email" class="form-control" id="newEmail">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="newPassword" class="form-control-label">Password:</label>
+                    <input type="password" class="form-control" id="newPassword">
+
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="createUser" type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </nav>

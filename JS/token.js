@@ -35,8 +35,6 @@ $('.littleMain').click(function(event) {
     }
   })
 })
-
-
 $('#logout').click(function(){
   event.preventDefault()
   localStorage.removeItem('token')

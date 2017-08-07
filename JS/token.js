@@ -2,19 +2,19 @@ $(document).ready(() => {})
 const url = 'http://localhost:8080/'
 // const url = 'https://still-bayou-84038.herokuapp.com/'
 if (localStorage.getItem('token') === null){
-    window.location.replace('./index.html')
+    window.location.replace('../HTML/index.html')
 }
 getProjects()
 
 $(`#home`).click(function() {
-  window.location.replace('./tokenProjects.html')
+  window.location.replace('../HTML/tokenProjects.html')
 })
 
 $(`.littleMain`).click(function(event) {
   const targetOfClick = $(event.target).attr('data-project')
   if (targetOfClick >= 1){
   localStorage.project = targetOfClick
-  window.location.replace('tokenTasks.html')
+  window.location.replace('../HTML/tokenTasks.html')
 }
 })
 
@@ -40,5 +40,5 @@ $('.littleMain').click(function(event) {
 $('#logout').click(function(){
   event.preventDefault()
   localStorage.removeItem('token')
-  window.location.replace('./index.html')
+  window.location.replace('../HTML/index.html')
 })

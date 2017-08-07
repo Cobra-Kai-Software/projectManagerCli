@@ -5,7 +5,7 @@ const url = 'http://localhost:8080/'
 getProjects()
 
 $(`#home`).click(function() {
-  window.location.replace('./index.html')
+  window.location.replace('../HTML/index.html')
 })
 
 $(`.projects`).click(function(event) {
@@ -13,7 +13,7 @@ $(`.projects`).click(function(event) {
   console.log(targetOfClick);
   if (targetOfClick >= 1){
   localStorage.project = targetOfClick
-  window.location.replace('taskPage.html')
+  window.location.replace('./HTML/taskPage.html')
 }
 })
 
@@ -35,7 +35,7 @@ $('.littleMain').click(function(event) {
   })
 })
 
-$("#loginSubmit").click(function(){
+$("#loginSubmit").click(function() {
   event.preventDefault()
   let userEmail = $('#loginEmail').val()
   let password = $('#loginPassword').val()
@@ -43,22 +43,27 @@ $("#loginSubmit").click(function(){
     "email": userEmail,
     "password": password
   }
-  console.log(login);
-  $.ajax({
-  url: url + 'login',
-  type: 'POST',
-  data: login,
-  success: function(result) {
-    if (result.error) {
-      alert(result.error)
-    } else {
-      localStorage.setItem('token', result.data)
-      window.location.replace('./tokenTasks.html')
-      console.log(result);
-    }
+  let email_filter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
+  if (email_filter.test(userEmail)) {
+    console.log('notworking');
+    $.ajax({
+      url: url + 'login',
+      type: 'POST',
+      data: login,
+      success: function(result) {
+        if (result.error) {
+          alert(result.error)
+        } else {
+          localStorage.setItem('token', result.data)
+          window.location.replace('./HTML/tokenTasks.html')
+          console.log(result);
+        }
+      }
+    })
+  } else {
+    alert('Your email address is invalid. Please enter a valid address.')
   }
-  })
-  })
+})
 
 $('#createUser').click(function(){
   event.preventDefault()

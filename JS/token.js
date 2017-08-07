@@ -18,23 +18,25 @@ $(`.littleMain`).click(function(event) {
 }
 })
 
+$('.littleMain').click(function(event){
+  event.preventDefault()
+  let projectDestroy = $(event.target).attr('data-projectDelete')
+  $.ajax({
+    url: url + projectDestroy,
+    type: 'DELETE',
+    success: function(result) {
+      console.log(result);
+        window.location.reload();
+    }
+  })
+})
+
 function getTasks(project) {
   $.get(url + project, function(tasksData) {
     addTasks(tasksData)
   })
 }
 
-$('.littleMain').click(function(event) {
-  const destroy = $(event.target).attr('data-id')
-  $(`#card${destroy}`).remove()
-  $.ajax({
-    url: url + `tasks/` + destroy,
-    type: 'DELETE',
-    success: function(result) {
-      window.location.reload();
-    }
-  })
-})
 $('#logout').click(function(){
   event.preventDefault()
   localStorage.removeItem('token')

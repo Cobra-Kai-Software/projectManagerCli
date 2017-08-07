@@ -47,10 +47,12 @@ $('#postButton').click(function(event) {
     type: 'POST',
     data: newTask,
     success: function(result) {
-      window.location.reload();
+       window.location.reload();
     }
   })
+
 })
+
 
 $('#logout').click(function(){
   event.preventDefault()

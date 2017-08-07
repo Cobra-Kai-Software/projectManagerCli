@@ -79,7 +79,7 @@ $("#loginSubmit").click(function() {
   }
 })
 
-$('#createUser').click(function(){
+$('#createUser').click(function() {
   event.preventDefault()
   let newName = $('#newName').val()
   let newEmail = $('#newEmail').val()
@@ -94,9 +94,7 @@ $('#createUser').click(function(){
     type: 'POST',
     data: newUser,
     success: function(result) {
-      localStorage.setItem('token', result.data)
-      window.location.replace('../HTML/tokenTasks.html')
-      console.log(result);
+
     }
   })
   console.log(newUser);

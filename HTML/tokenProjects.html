@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="../main.css">
 </head>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(darkgray, lightgray); border: solid .01vh;">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .6))">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,7 +20,7 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-primary my-2 my-sm-0" id="logout" type="submit">Logout</button>
+      <button class="btn btn-primary my-2 my-sm-0" id="logout" type="submit">Logout</button>
     </form>
   </div>
 </nav>
@@ -29,10 +29,39 @@
   <main class="bigMain">
     <main class="littleMain">
 
+      <div class="add">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newProject">Add Project</button><br>
+        <div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Project</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="form-control-label">New Project Name:</label>
+                    <input type="text" class="form-control" id="Project-name">
+                  </div>
+
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="postButton" type="button" class="btn btn-primary">Submit Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
   </main>
   <footer>
-    <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(lightgray,darkgray); border: solid .01vh;">
+    <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .6))">
       <a class="navbar-brand" href="#">© 2017 Project Manager. All Rights Reserved</a>
     </nav>
   </footer>

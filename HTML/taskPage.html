@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="../main.css">
 </head>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(darkgray, lightgray); border: solid .01vh;">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .6))">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
@@ -22,10 +22,10 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" id="loginEmail" placeholder="Email">
       <input class="form-control mr-sm-2" type="password" id="loginPassword" placeholder="Password">
-      <button class="btn btn-outline-primary my-2 my-sm-0" id="loginSubmit" type="submit">Login</button>
+      <button class="btn btn-primary my-2 my-sm-0" id="loginSubmit" type="submit">Login</button>
 
       <div class="add">
-        <button type="button" class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#newUser">Create User</button><br>
+        <button type="button" class="btn btn-primary my-2 my-sm-0" data-toggle="modal" data-target="#newUser" style="margin-left:1vh;">Create User</button><br>
         <div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-</form>
+    </form>
   </div>
 </nav>
 
@@ -72,20 +72,20 @@
     <main class="littleMain container">
 
       <section class="tasks">
-        <div class="todo cards-group">
+        <div class="todo cards-group sizeDiv">
 
         </div>
-        <div class="icebox cards-group">
+        <div class="icebox cards-group sizeDiv">
 
         </div>
-        <div class="done cards-group">
+        <div class="done cards-group sizeDiv">
 
         </div>
       </section>
     </main>
   </main>
   <footer>
-    <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(lightgray,darkgray); border: solid .01vh;">
+    <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .6))">
       <a class="navbar-brand" href="#">© 2017 Project Manager. All Rights Reserved</a>
     </nav>
   </footer>

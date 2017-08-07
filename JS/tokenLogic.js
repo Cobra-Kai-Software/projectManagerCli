@@ -9,7 +9,7 @@ function getProjects() {
       $('.projects').append(
         `<div class="card card-outline-danger mb-3 text-center" data-project="${projectData[i].id} id="card${projectData[i].id}">
       <div class="card-block" style="height: 8vh; display:flex; justify-content: center;align-items:center;">
-        <button class="btn btn-outline-danger my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
+        <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
       </div>`
       )
     }

@@ -3,9 +3,9 @@ function getProjects() {
   $.get(url, function(projectData) {
     for (var i = 0; i < projectData.length; i++) {
       $('.projects').append(
-        `<div class="card card-outline-danger mb-3 text-center" data-project="${projectData[i].id} id="card${projectData[i].id}">
+        `<div class="card card-outline-primary mb-3 text-center" data-project="${projectData[i].id} id="card${projectData[i].id}">
       <div class="card-block" style="height: 8vh; display:flex; justify-content: center;align-items:center;">
-        <button class="btn btn-outline-danger my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
+        <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
       </div>`
       )
     }
@@ -23,9 +23,9 @@ function addTasks(tasksData) {
             <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
             </div>
         `)
-  }
-  if (tasksData[i].icebox === true) {
-    $('.icebox').append(`
+    }
+    if (tasksData[i].icebox === true) {
+      $('.icebox').append(`
         <div class="card-block" id="card${tasksData[i].project_id}" style="height: auto ;border: solid 1px;margin:1vh;">
               <div class ="top">
               </div>
@@ -33,9 +33,9 @@ function addTasks(tasksData) {
               <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
               </div>
         `)
-  }
-  if (tasksData[i].finished === true) {
-    $('.done').append(`
+    }
+    if (tasksData[i].finished === true) {
+      $('.done').append(`
         <div class="card-block" id="card${tasksData[i].project_id}" style="height: auto ;border: solid 1px;margin:1vh;">
         <div class ="top">
         </div>
@@ -43,7 +43,7 @@ function addTasks(tasksData) {
         <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
         </div>
         `)
+    }
   }
-}
 
 }

@@ -1,6 +1,9 @@
 body {
   background-color: lightgray;
+  background-size: cover;
+  background-image: url('./pictures/bg.jpg');
 }
+
 .bigMain {
   display: flex;
   justify-content: center;
@@ -8,57 +11,67 @@ body {
 }
 
 .littleMain {
-  display: inline-flex;
-  height: 80vh;
+  display: flex;
+  min-height: 80vh;
+  height: auto;
   width: 95vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 4vh;
+  margin-bottom: 8vh;
 }
 
 .projects {
   width: 35vw;
-  height: 60vh;
+  min-height: 60vh;
+  height: auto;
   border: solid 1px;
+  margin-top: 2vh;
 }
 
 .tasks {
-  width: 85vw;
   border: solid 1px;
   margin-top: auto;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height:;
+  margin-top: 2vh;
+  display: table;
+  width: 95%
 }
 
 .todo {
+  display: table-cell;
   border: solid 1px;
   width: 27vw;
-  height: 71vh ;
+  min-height: 71vh;
+  height: auto;
   margin: .5vw;
-  background: linear-gradient(rgba(245, 150 ,0,.5),rgba(255, 151 ,0,.7));
+  background: linear-gradient(rgba(245, 150, 0, .9), rgba(255, 151, 0, .9));
 }
 
 .icebox {
+  display: table-cell;
   border: solid 1px;
   width: 27vw;
-  height: 71vh ;
+  min-height: 71vh;
+  height: auto;
   margin: .5vw;
-  background: linear-gradient(rgba(141, 240 ,242,.7), rgba(81, 180 ,182,.7));
+  background: linear-gradient(rgba(141, 240, 242, .9), rgba(81, 180, 182, .9));
 }
 
 .done {
+  display: table-cell;
   border: solid 1px;
   width: 27vw;
-  height: 71vh ;
+  min-height: 71vh;
+  height: auto;
   margin: .5vw;
-  background: linear-gradient(rgba(217, 99 ,89,.7), rgba(150, 50 ,49,.7));
+  background: linear-gradient(rgba(217, 99, 89, .9), rgba(150, 50, 49, .9));
 }
-.form-group{
+
+.form-group {
   margin: 2vw;
 }
+
 .modal-body {
   display: flex;
   flex-flow: column;

@@ -23,7 +23,7 @@ $('.littleMain').click(function(event){
   $(`.card${projectDestroy}`).fadeOut()
   if (destroy != null){
     $.ajax({
-    url: url + destroy,
+    url: url + projectDestroy,
     type: 'DELETE',
     success: function(result) {
     }

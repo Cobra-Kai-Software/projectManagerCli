@@ -20,7 +20,7 @@ $('.littleMain').click(function(event) {
   $(`#card${destroy}`).remove()
   if (destroy != null){
     $.ajax({
-    url: url + `tasks/` + destroy,
+    url: url + destroy,
     type: 'DELETE',
     success: function(result) {
     }
@@ -33,11 +33,11 @@ $('#postButton').click(function(event) {
   const newTaskDescription = $('#description-text').val()
   const newTask = {
     "name": newTaskName,
-    "description": newTaskDescription,
     "todo": true,
     "inprogress": false,
     "finished": false,
     "icebox": false,
+    "member_id": tokenParsed.id,
     "project_id": localStorage.project
   }
   $.ajax({

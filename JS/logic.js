@@ -1,3 +1,6 @@
+// const url = 'http://localhost:8080/'
+const url = 'https://still-bayou-84038.herokuapp.com/'
+
 function getProjects() {
   $('.tasks').css('display', 'none');
   $.get(url, function(projectData) {

@@ -1,3 +1,6 @@
+// const url = 'http://localhost:8080/'
+const url = 'https://still-bayou-84038.herokuapp.com/'
+
 function getProjects() {
   $('.tasks').css('display', 'none');
   $('.littleMain').append(
@@ -7,9 +10,10 @@ function getProjects() {
   $.get(url, function(projectData) {
     for (var i = 0; i < projectData.length; i++) {
       $('.projects').append(
-        `<div class="card card-outline-danger mb-3 text-center" data-project="${projectData[i].id} id="card${projectData[i].id}">
+        `<div class="card card-outline-danger mb-3 text-center card${projectData[i].id}" data-project="${projectData[i].id} id="">
       <div class="card-block" style="height: 8vh; display:flex; justify-content: center;align-items:center;">
-        <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
+       <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 25vw; height:6vh;">${projectData[i].name}</button>
+      <button class="btn btn-danger my-2 my-sm-0" id="deleteProject" data-projectDelete="${projectData[i].id}" type="submit"style="margin-left:1vw;">Delete</button>
       </div>`
       )
     }

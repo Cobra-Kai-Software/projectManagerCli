@@ -1,6 +1,5 @@
 $(document).ready(() => {})
-const url = 'http://localhost:8080/'
-// const url = 'https://still-bayou-84038.herokuapp.com/'
+
 if (localStorage.getItem('token') === null){
     window.location.replace('../index.html')
 }
@@ -21,12 +20,11 @@ $(`.littleMain`).click(function(event) {
 $('.littleMain').click(function(event){
   event.preventDefault()
   let projectDestroy = $(event.target).attr('data-projectDelete')
+  $(`.card${projectDestroy}`).fadeOut()
   $.ajax({
     url: url + projectDestroy,
     type: 'DELETE',
     success: function(result) {
-      console.log(result);
-        window.location.reload();
     }
   })
 })

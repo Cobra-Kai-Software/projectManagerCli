@@ -18,13 +18,13 @@ getTasks(localStorage.project)
 $('.littleMain').click(function(event) {
   const destroy = $(event.target).attr('data-id')
   $(`#card${destroy}`).remove()
-  $.ajax({
+  if (destroy != null){
+    $.ajax({
     url: url + `tasks/` + destroy,
     type: 'DELETE',
     success: function(result) {
-      window.location.reload();
     }
-  })
+  })}
 })
 
 $('#postButton').click(function(event) {

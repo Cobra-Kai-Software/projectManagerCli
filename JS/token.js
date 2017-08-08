@@ -21,12 +21,13 @@ $('.littleMain').click(function(event){
   event.preventDefault()
   let projectDestroy = $(event.target).attr('data-projectDelete')
   $(`.card${projectDestroy}`).fadeOut()
-  $.ajax({
-    url: url + projectDestroy,
+  if (destroy != null){
+    $.ajax({
+    url: url + destroy,
     type: 'DELETE',
     success: function(result) {
     }
-  })
+  })}
 })
 
 function getTasks(project) {

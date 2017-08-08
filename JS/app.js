@@ -20,18 +20,6 @@ function getTasks(project) {
   })
 }
 
-$('.littleMain').click(function(event) {
-  const destroy = $(event.target).attr('data-id')
-  $(`#card${destroy}`).remove()
-  $.ajax({
-    url: url + `tasks/` + destroy,
-    type: 'DELETE',
-    success: function(result) {
-      window.location.reload();
-    }
-  })
-})
-
 $("#loginSubmit").click(function() {
   event.preventDefault()
   let userEmail = $('#loginEmail').val()

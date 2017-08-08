@@ -9,8 +9,7 @@ function getProjects() {
       $('.projects').append(
         `<div class="card card-outline-danger mb-3 text-center" data-project="${projectData[i].id} id="card${projectData[i].id}">
       <div class="card-block" style="height: 8vh; display:flex; justify-content: center;align-items:center;">
-        <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 25vw; height:6vh;">${projectData[i].name}</button>
-        <button class="btn btn-danger my-2 my-sm-0" id="deleteProject" data-projectDelete="${projectData[i].id}" type="submit"style="margin-left:1vw;">Delete</button>
+        <button class="btn btn-primary my-2 my-sm-0" data-project="${projectData[i].id}" type="submit" style="width: 32vw; height:6vh;">${projectData[i].name}</button>
       </div>`
       )
     }
@@ -27,7 +26,6 @@ function addTasks(tasksData) {
         <span aria-hidden="true" data-id="${tasksData[i].id}" id="span${tasksData[i].id}">&times;</span> </button>
         </div>
         <h6 class="card-title" id="projectID" data-projectId="${tasksData[i].project_id}" style="margin-top:-2vh;">${tasksData[i].task_name}</h6>
-        <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
         <button id="icebox${tasksData[i].id}" class="btn btn-outline-primary my-2 my-sm-0" data-icebox="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small class="text-muted" data-icebox="${tasksData[i].id}">IceBox</small></button>
         <button id="done${tasksData[i].id}"class="btn btn-outline-primary my-2 my-sm-0" data-done="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small class="text-muted" data-done="${tasksData[i].id}">Done</small></button>
         </div>
@@ -41,7 +39,6 @@ function addTasks(tasksData) {
         <span aria-hidden="true" data-id="${tasksData[i].id}" id="span${tasksData[i].id}">&times;</span> </button>
         </div>
         <h6 class="card-title" id="projectID" data-projectId="${tasksData[i].project_id}" style="margin-top:-2vh;">${tasksData[i].task_name}</h6>
-        <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
         <button id="todo${tasksData[i].id}" class="btn btn-outline-primary my-2 my-sm-0" data-todo="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small data-todo="${tasksData[i].id}" class="text-muted">Todo</small></button>
         <button id="done${tasksData[i].id}" class="btn btn-outline-primary my-2 my-sm-0" data-done="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small data-done="${tasksData[i].id}" class="text-muted">Done</small></button>
         </div>
@@ -55,7 +52,6 @@ function addTasks(tasksData) {
         <span aria-hidden="true" data-id="${tasksData[i].id}" id="span${tasksData[i].id}">&times;</span> </button>
         </div>
         <h6 class="card-title" style="margin-top:-2vh;" id="projectID" data-projectId="${tasksData[i].project_id}">${tasksData[i].task_name}</h6>
-        <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
         <button id="todo${tasksData[i].id}" class="btn btn-outline-primary my-2 my-sm-0" data-todo="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small data-todo="${tasksData[i].id}" class="text-muted" >Todo</small></button>
         <button id="icebox${tasksData[i].id}" class="btn btn-outline-primary my-2 my-sm-0" data-icebox="${tasksData[i].id}" type="submit" style="height: 5vh; width:7vw;"><small data-icebox="${tasksData[i].id}" class="text-muted" >IceBox</small></button>
         </div>

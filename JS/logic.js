@@ -20,7 +20,6 @@ function addTasks(tasksData) {
             <div class ="top">
             </div>
             <h6 class="card-title" style="margin-top:-2vh;" id="projectID" data-projectId="${tasksData[i].project_id}">${tasksData[i].task_name}</h6>
-            <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
             </div>
         `)
     }
@@ -30,7 +29,6 @@ function addTasks(tasksData) {
               <div class ="top">
               </div>
               <h6 class="card-title" style="margin-top:-2vh;" id="projectID" data-projectId="${tasksData[i].project_id}">${tasksData[i].task_name}</h6>
-              <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
               </div>
         `)
     }
@@ -40,7 +38,6 @@ function addTasks(tasksData) {
         <div class ="top">
         </div>
         <h6 class="card-title" style="margin-top:-2vh;" id="projectID" data-projectId="${tasksData[i].project_id}">${tasksData[i].task_name}</h6>
-        <p class="card-text"style="margin-top:-2vh;margin-bottom: ;"><small class="text-muted">${tasksData[i].description}</p></small></p>
         </div>
         `)
     }

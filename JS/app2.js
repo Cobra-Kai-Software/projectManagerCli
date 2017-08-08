@@ -56,7 +56,6 @@ $("#loginSubmit").click(function() {
   }
   let email_filter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
   if (email_filter.test(userEmail)) {
-    console.log('notworking');
     $.ajax({
       url: url + 'login',
       type: 'POST',
@@ -67,7 +66,6 @@ $("#loginSubmit").click(function() {
         } else {
           localStorage.setItem('token', result.data)
           window.location.replace('../HTML/tokenTasks.html')
-          console.log(result);
         }
       }
     })
@@ -98,7 +96,6 @@ $('#createUser').click(function() {
       } else {
         localStorage.setItem('token', result.data)
         window.location.replace('../HTML/tokenTasks.html')
-        console.log(result);
       }
     }
   })

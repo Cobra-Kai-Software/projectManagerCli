@@ -111,7 +111,6 @@ function addTasks(tasksData) {
       type: 'PUT',
       data: doneNew,
       success: function(result) {
-        console.log('hi');
         window.location.reload();
       }
     })

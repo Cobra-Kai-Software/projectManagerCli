@@ -8,7 +8,6 @@ $(`#home`).click(function() {
 
 $(`.projects`).click(function(event) {
   const targetOfClick = $(event.target).attr('data-project')
-  console.log(targetOfClick);
   if (targetOfClick >= 1){
   localStorage.project = targetOfClick
   window.location.replace('./HTML/taskPage.html')
@@ -53,7 +52,6 @@ $("#loginSubmit").click(function() {
         } else {
           localStorage.setItem('token', result.data)
           window.location.replace('../HTML/tokenProjects.html')
-          console.log(result);
         }
       }
     })
@@ -82,10 +80,8 @@ $('#createUser').click(function() {
       if (result.error) {
         alert(result.error)
       } else {
-        console.log(result);
         localStorage.setItem('token', result.data)
         window.location.replace('../HTML/tokenProjects.html')
-        console.log(result);
       }
     }
   })

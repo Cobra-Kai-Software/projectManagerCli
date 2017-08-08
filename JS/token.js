@@ -46,7 +46,6 @@ $('#addProject').click(function(event) {
   const newProject = {
     "name": newProjectName,
   }
-  console.log(newProject);
   $.ajax({
     url: url,
     type: 'POST',

@@ -13,7 +13,7 @@ $(`.projects`).click(function(event) {
   console.log(targetOfClick);
   if (targetOfClick >= 1){
   localStorage.project = targetOfClick
-  window.location.replace('../HTML/taskPage.html')
+  window.location.replace('./HTML/taskPage.html')
 }
 })
 

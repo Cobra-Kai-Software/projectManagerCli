@@ -21,11 +21,12 @@ $('.littleMain').click(function(event){
   event.preventDefault()
   let projectDestroy = $(event.target).attr('data-projectDelete')
   $(`.card${projectDestroy}`).fadeOut()
-  if (destroy != null){
+  if (projectDestroy != null){
     $.ajax({
     url: url + projectDestroy,
     type: 'DELETE',
     success: function(result) {
+      window.location.reload();
     }
   })}
 })

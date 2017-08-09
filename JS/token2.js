@@ -16,13 +16,15 @@ function getTasks(project) {
 getTasks(localStorage.project)
 
 $('.littleMain').click(function(event) {
+  event.preventDefault();
   const destroy = $(event.target).attr('data-id')
   $(`#card${destroy}`).remove()
   if (destroy != null){
     $.ajax({
-    url: url + destroy,
+    url: url + 'tasks/' + destroy,
     type: 'DELETE',
     success: function(result) {
+      window.location.reload();
     }
   })}
 })
@@ -37,7 +39,7 @@ $('#postButton').click(function(event) {
     "inprogress": false,
     "finished": false,
     "icebox": false,
-    "member_id": tokenParsed.id,
+    "member_id": 1,
     "project_id": localStorage.project
   }
   $.ajax({

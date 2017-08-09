@@ -4,9 +4,10 @@
 A project manager to tackle all your project planning from
 - Create A user login
 - View current projects
-- Show currently in progress
+- Show projects currently in progress
 - Move project to icebox or done categories
-- Delete finished projects
+- Select a project to work on
+- Delete unwanted items and mistakes
 
 
 #### Purpose

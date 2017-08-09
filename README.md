@@ -26,4 +26,4 @@ Ensures only your authorized team members can modify you projects
 
 ## Video
 
-[Link](https://"") Insert tutorial video link here after recording
+[Link](https://"youtu.be/mCCY2Omuhn4") <= Quickstart user video

@@ -9,7 +9,6 @@ A project manager to tackle all your project planning from
 - Select a project to work on
 - Delete unwanted items and mistakes
 
-
 #### Purpose
 Why use Odin Project Manager?
 
@@ -18,6 +17,8 @@ Why use Odin Project Manager?
 ### Getting Started
 1. Create a login!
 2. Create some projects!
+3. Add some task!
+4. Conquer Valhalla!
 
 ## Project Security
 Ensures only your authorized team members can modify you projects
@@ -25,4 +26,4 @@ Ensures only your authorized team members can modify you projects
 
 ## Video
 
-[Link](https://"")insert tutorial video link here
+[Link](https://"") Insert tutorial video link here after recording

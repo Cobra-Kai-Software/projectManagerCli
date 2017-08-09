@@ -21,7 +21,7 @@ Why use Odin Project Manager?
 4. Conquer Valhalla!!!
 
 ## Project Security
-Ensures only your authorized team members can modify you projects
+Ensures only your authorized team members can modify your projects
 
 
 ## Video

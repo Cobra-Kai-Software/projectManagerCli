@@ -15,10 +15,10 @@ Why use Odin Project Manager?
 ```Manage projects and collaborate with team members to ensure optimum efficiency and less wasted man-hours by helping eliminate team members' redundant work and ensuring everyone stays on task.```
 
 ### Getting Started
-1. Create a login!
-2. Create some projects!
-3. Add some task!
-4. Conquer Valhalla!
+1. Create a login
+2. Create some projects
+3. Add some task(s)
+4. Conquer Valhalla!!!
 
 ## Project Security
 Ensures only your authorized team members can modify you projects

@@ -26,4 +26,4 @@ Ensures only your authorized team members can modify you projects
 
 ## Video
 
-[![Watch the video](https://youtu.be/mCCY2Omuhn4) <= Quickstart user video
+[!Quickstart user video(https://youtu.be/mCCY2Omuhn4)
